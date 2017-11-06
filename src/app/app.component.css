@@ -1,0 +1,50 @@
+.container-fluid{
+padding-right:40px;
+}
+.flex-container {   
+	-webkit-display:flex;/*safari*/
+	display:flex;
+	-webkit-flex-wrap: wrap; /* Safari */
+	flex-wrap: wrap;	
+}
+.flex-item {	
+padding-left:30px;
+width:200px;
+flex-grow:1;
+justify-content:center;
+}
+@media screen and (max-width: 1071px) {
+	.flex-item {	
+padding-left:30px;
+width:150px;
+
+justify-content:center;
+
+}
+input[type=text]::-ms-clear {
+    display: none;
+}
+}
+.flex-item h2{
+	color:white;
+	text-align:left;
+	font-size:24px;
+	margin-top:24px;
+	margin-bottom:90px;
+	width:150px;	
+}
+
+.input-group{
+	margin-bottom:34px;
+	margin-top:30px;
+	margin-left:30px;
+
+}
+.form-control{
+	color: white;
+	background-color:black;	
+	
+}
+.row{
+	position:relative
+}

@@ -1,0 +1,35 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class = "container-fluid" infinite-scroll
+            [infiniteScrollDistance]="2"
+            [infiniteScrollThrottle]="300"
+            (scrolled)="onScroll()">
+
+  <div class="row">
+   <div class="col-xs-12 col-lg-12">
+      <div class="input-group">
+	  <div class="input-group-btn">
+        <button (click)="filterList()" class="btn btn-default" type="button" >
+        <span class="glyphicon glyphicon-search" ></span>
+        </button>
+   </div>
+   <input type="text" class="form-control" placeholder="Search" (keyup.enter)="filterList()" [(ngModel)]='filterText'/>
+   <div class="input-group-btn">
+        <button (click)="clearSearch()" class="btn btn-default" type="button" >
+        <span class="glyphicon glyphicon-remove"></span>
+        </button>
+   </div>
+   </div>
+   </div>
+    </div>
+	<div class="row">
+   <div class="col-md-12 col-lg-12">
+<div class="flex-container" *ngIf = " videosDataArray ">
+	<div class="flex-item" *ngFor = "let arr of videosDataArray.page['content-items'].content" >
+	
+	  <img src = "assets/images/{{arr['poster-image']}}" class = "img-responsive" onerror="this.src='assets/images/noData.jpg';">
+	  <h2>{{ arr.name }}</h2>
+	</div>
+</div>
+</div>
+</div>
+</div>
